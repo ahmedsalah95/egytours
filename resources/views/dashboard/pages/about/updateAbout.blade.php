@@ -4,7 +4,7 @@
 
 
 
-   {{$data = \App\About::where('id',$id)->first()}}
+   <?php $data = \App\About::where('id',$id)->first();?>
 
     <div class="container">
         <div class="row">

@@ -281,6 +281,7 @@ $Testimonials = \App\Testimonial::all();
 <!-- --------------- Start Explore  SECTION -------------- -->
 <section class="Explore">
     <div class="container">
+        @if($homeSettings)
         <center>
             <h3>
                 <b>{{$homeSettings->section_5_title}}</b>
@@ -293,6 +294,7 @@ $Testimonials = \App\Testimonial::all();
                 </b>
             </p>
         </center>
+            @endif
     </div>
 </section>
 <!-------------------------------- End Explore  SECTION---------------------------->
@@ -329,6 +331,7 @@ $Testimonials = \App\Testimonial::all();
          $settings = \App\setting::first();
 
         ?>
+        @if($settings)
         <center>
             <a class="ContactTitles">
                 <span class="Contact glyphicon glyphicon-envelope" id="First"></span>
@@ -344,6 +347,27 @@ $Testimonials = \App\Testimonial::all();
             <br>
             © 2018 Egy-Tour . All Rights Reserved | Powered by Smart Geeks
         </center>
+
+            @else
+
+
+                <center>
+                    <a class="ContactTitles">
+                        <span class="Contact glyphicon glyphicon-envelope" id="First"></span>
+
+                    </a>
+                    <a class="ContactTitles"><span class="Contact glyphicon glyphicon-earphone"></span>
+
+                    </a>
+                    <a class="ContactTitles"><span class="Contact glyphicon glyphicon-home"></span>
+
+                    </a>
+                    <br>
+                    <br>
+                    © 2018 Egy-Tour . All Rights Reserved | Powered by Smart Geeks
+                </center>
+
+            @endif
     </div>
 </footer>
 <!--------------------------------  End FOOTER ---------------------------->

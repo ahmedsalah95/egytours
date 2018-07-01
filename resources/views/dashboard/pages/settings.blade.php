@@ -1,6 +1,8 @@
 @extends('dashboard.master')
 @section('content')
     <script src="//cdn.ckeditor.com/4.9.0/full/ckeditor.js"></script>
+
+    @if(count($data))
 @foreach($data as $d)
 
 
@@ -136,9 +138,16 @@
     </section>
 
 
+
+@endforeach
+
+
+    @endif
+
+
+
     <script>
         CKEDITOR.replace( 'description' );
     </script>
-@endforeach
 
 @stop

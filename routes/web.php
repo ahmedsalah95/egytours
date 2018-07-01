@@ -99,7 +99,7 @@ Route::get('/single/showing/{id}','CategoryController@singleTrip');
 // plan my trip
 
 
-Route::post('planTripSubmit','TripsController@planTripSubmit')->middleware('auth');
+Route::post('planTripSubmit','TripsController@planTripSubmit');
 
 Route::get('/plannedTrips','TripsController@plannedTrips')->middleware('auth');
 
