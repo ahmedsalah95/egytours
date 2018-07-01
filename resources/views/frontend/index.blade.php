@@ -40,7 +40,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/front-home"><span class="NavDesign">Home</span></a></li>
+                    <li><a href="/"><span class="NavDesign">Home</span></a></li>
                     <li><a href="/AboutUs"><span class="NavLink">About</span></a></li>
                     <li><a href="/tripsFront"><span class="NavLink">Trips</span></a></li>
                     <li><a href="/planTrip"><span class="NavLink">Plan My Trip</span></a></li>
@@ -59,6 +59,8 @@
 
 
         ?>
+
+        @if(isset($homeSettings))
             <style>
                 .WelcomeSection
                 {
@@ -69,8 +71,25 @@
                     padding-bottom: 14%;
                 }
             </style>
+
+
+            @else
+
+                <style>
+                    .WelcomeSection
+                    {
+
+
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        padding-bottom: 14%;
+                    }
+                </style>
+
+            @endif
+
         <div class="Header">
-            <h1><span class="HeadDesign">WELCOME </span>{{$homeSettings->title}}</h1>
+            <h1><span class="HeadDesign">WELCOME </span>@if(isset($homeSettings)){{$homeSettings->title}}@endif</h1>
             <hr>
             <h4><span class="HeadBody">we are offering a wide selection of trips where you can be 	able to choose from it
 				<br>
@@ -100,6 +119,7 @@
 
 <section class="Experince">
     <center>
+        @if(isset($homeSettings))
         <h1 class="ExperinceHeader">{{$homeSettings->section_3_title}}</h1>
         <h3 class="ExperinceSecHeader"> " Why choose Egytour "</h3>
         <hr>
@@ -108,6 +128,7 @@
             <br>
             <br>
             </h4>
+            @endif
     </center>
     <button onclick="topFunction()" id="myBtn" title="Go to top">
 		<span class="glyphicon glyphicon-chevron-up Up">
@@ -206,6 +227,7 @@ $Testimonials = \App\Testimonial::all();
 <section class="Cards">
     <div class="container Large">
         <?php  $counter=1;?>
+        @if($Testimonials)
         @foreach($Testimonials as $key=>$value)
 
         @if($key==0)
@@ -249,7 +271,7 @@ $Testimonials = \App\Testimonial::all();
 
 
         @endforeach
-
+        @endif
 
     </div>
 </section>
@@ -331,7 +353,7 @@ $Testimonials = \App\Testimonial::all();
        /* ids=['num1','num2','num3','num4'];
         cards = ['card1','card2','card3','card4'];*/
 
-       var num = <?php echo count($Testimonials)  ?>;
+       var num =  @if($Testimonials)<?php echo count($Testimonials)  ?> @endif;
        var ids=[];
        var cards=[];
        for(var i=1;i<=num;i++)

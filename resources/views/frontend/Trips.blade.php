@@ -39,7 +39,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/front-home"><span class="NavDesign">Home</span></a></li>
+        <li><a href="/"><span class="NavDesign">Home</span></a></li>
         <li><a href="/AboutUs"><span class="NavLink">About</span></a></li>
         <li><a href="/tripsFront"><span class="NavLink">Trips</span></a></li>
         <li><a href="/planTrip"><span class="NavLink">Plan My Trip</span></a></li>
@@ -71,9 +71,11 @@
       $categories = \App\Category::all();
       ?>
         <button type="button" class="list-group-item active ListBtn">All</button>
+        @if($categories)
       @foreach($categories as $category)
           <a href="/category/showing/{{$category->id}}" class="list-group-item  ListBtn">{{$category->name}}</a>
       @endforeach
+          @endif
     </div>
   </div>
   <div class="container col-lg-10">

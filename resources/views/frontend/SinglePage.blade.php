@@ -43,7 +43,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="/front-home"><span class="NavDesign">Home</span></a></li>
+          <li><a href="/"><span class="NavDesign">Home</span></a></li>
           <li><a href="/AboutUs"><span class="NavLink">About</span></a></li>
           <li><a href="/tripsFront"><span class="NavLink">Trips</span></a></li>
           <li><a href="/planTrip"><span class="NavLink">Plan My Trip</span></a></li>
@@ -64,6 +64,7 @@
 
 <section class="Info"> 
   <div class="InfoHeading">
+      @if($data)
     <center>
       <h2>{{$data->title}}</h2> <!-- TRIPNAME -->
 
@@ -101,10 +102,14 @@
 
         </table>
     </div>
-    </center>       
+    </center>
+  </div>
 </section>
 
+@endif
+@if(isset($data))
 <section class="Tour">
+
   <center>
     <div class="inclusion">
         <h3 class="inclusionHead">Tour inclusion</h3>
@@ -126,7 +131,7 @@
     </div>
   </center>
 </section>
-
+@endif
 
 <section class="regular slider container ">
     <?php
@@ -135,11 +140,13 @@
 
 
     ?>
+    @if($images)
     @foreach($images as $image)
     <div>
       <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$image->image}}">
     </div>
     @endforeach
+        @endif
   </section>
 
   <section class="ContactUs">
@@ -183,6 +190,7 @@
         $settings = \App\setting::first();
 
         ?>
+        @if($settings)
         <center>
             <a class="ContactTitles">
                 <span class="Contact glyphicon glyphicon-envelope" id="First"></span>
@@ -198,6 +206,7 @@
             <br>
             © 2018 Egy-Tour . All Rights Reserved | Powered by Smart Geeks
         </center>
+            @endif
     </div>
 </footer>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>

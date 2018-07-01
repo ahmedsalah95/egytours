@@ -36,7 +36,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="/front-home"><span class="NavDesign">Home</span></a></li>
+			<li><a href="/"><span class="NavDesign">Home</span></a></li>
 			<li><a href="/AboutUs"><span class="NavLink">About</span></a></li>
 			<li><a href="/tripsFront"><span class="NavLink">Trips</span></a></li>
 			<li><a href="/planTrip"><span class="NavLink">Plan My Trip</span></a></li>
@@ -117,6 +117,7 @@
             $settings = \App\setting::first();
 
             ?>
+			@if($settings)
 			<center>
 				<a class="ContactTitles">
 					<span class="Contact glyphicon glyphicon-envelope" id="First"></span>
@@ -132,6 +133,7 @@
 				<br>
 				© 2018 Egy-Tour . All Rights Reserved | Powered by Smart Geeks
 			</center>
+				@endif
 		</div>
 	</footer>
 <!--------------------------------  End FOOTER ---------------------------->
