@@ -1,0 +1,15 @@
+.option
+{
+	text-align: center;
+	color: white;
+	background-color: #151515;
+	font-size: 20px;
+}
+.special
+{
+	color: white;
+}
+.special::selection
+{
+	color: white;
+}

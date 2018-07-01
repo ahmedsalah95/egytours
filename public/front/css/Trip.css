@@ -1,0 +1,256 @@
+p
+{
+	color: black;
+}
+img
+{
+	height: 380px;
+	width: 100%;
+	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+
+h3
+{
+	color:#F24E31;
+}
+hr
+{
+	border-color:#F24E31;
+}
+/*Animation*/
+
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+
+  
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.HEADING
+{
+	background-image: url(../img/bckgrndTrips.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+.WelcomeText
+{
+	padding-top: 8%;
+	padding-bottom: 12%;
+}
+
+.Content
+{
+	margin-top: 4%;
+  margin-left: 3%;
+}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {
+    z-index: 2;
+    color: #fff;
+    background-color: #F24E31;
+    border-color: transparent;
+    text-align: center;
+}
+.list-group>button
+{
+	text-align: center;
+	border-color: transparent;
+}
+.active
+{
+	animation: none;
+}
+
+.Card
+{
+
+	margin-bottom: 2%;
+}
+.Pictures
+{
+  text-align: center;
+}
+.anime
+{
+	float: left;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: 1000;
+   background-color: rgb(0,0,0,.6);
+   width: 94%;
+   height: 380px;
+   display: none;
+   margin-left: 3%;
+   font-weight: bold;
+   animation-duration: 0.5s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.AnimeContent
+{
+  margin-top: 80%;
+}
+@media(min-width: 1199px)
+{
+  .anime
+{
+
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: 1000;
+   background-color: rgb(0,0,0,.6);
+   text-align: center;
+   width: 92%;
+   margin-left: 4%;
+   height: 380px;
+   display: none;
+   font-weight: bold;
+   animation-duration: 0.5s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+}
+@media(max-width: 991px)
+{
+  .anime
+{
+
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: 1000;
+   background-color: rgb(0,0,0,.6);
+   width: 96%;
+   margin-left: 2%;
+   height: 380px;
+   display: none;
+   font-weight: bold;
+   animation-duration: 0.5s;
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+.AnimeContent
+{
+  margin-top: 40%;
+}
+}
+
+@media(max-width: 767px)
+{
+    .anime
+  {
+
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: 1000;
+     background-color: rgb(0,0,0,.6);
+     width: 94%;
+   margin-left: 3%;
+   height: 380px;
+     display: none;
+     font-weight: bold;
+     animation-duration: 0.5s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+  }
+  .AnimeContent
+{
+  margin-top: 40%;
+}
+}
+
+@media(max-width: 550px)
+{
+    .anime
+  {
+
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     z-index: 1000;
+     background-color: rgb(0,0,0,.6);
+     width: 92%;
+   margin-left: 4%;
+   height: 380px;
+     display: none;
+     font-weight: bold;
+     animation-duration: 0.5s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+  }
+}
+
+
+.AnimeBtn
+{
+	padding-right: 15%;
+	padding-left: 15%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-radius: 25px;
+	background-color:#F24E31;
+	border-color: transparent; 
+	 -webkit-animation-name: bounceInUp;
+	  animation-name: bounceInUp;
+	  animation-duration: 1s;
+}
+.AnimeBtn:hover,.AnimeBtn:active,.AnimeBtn:focus
+{
+	background-color: white;
+	color:#F24E31;
+}
+.footer
+{
+  padding: 0;
+  margin:0;
+  background-color: white;
+  color:black;
+}
+.ContactTitles
+{
+  black;
+}

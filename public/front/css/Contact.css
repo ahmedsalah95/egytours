@@ -1,0 +1,72 @@
+
+
+body
+{
+	background-image: url(../img/Aboutbg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+h2
+{
+	color:#feca57;
+}
+h4
+{
+	color:white;
+}
+.ContactUs
+{
+	margin-top: 7%;
+	margin-bottom: 11%;
+}
+.Form
+{
+	width: 65%;
+}
+.form-control
+{
+	border-radius: 0;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	background-color: transparent;
+	margin-bottom: 3%;	
+	color: white;
+}
+.form-control:hover,.form-control:active,.form-control:focus
+{
+	border-radius: 0;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: #feca57;
+}
+.btn 
+{
+	
+	background-color: #151515;
+	color: #feca57;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.btn:hover,.btn:focus,.btn:active
+{
+	background-color: #151515;
+	color: #feca57;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+
+
+
+
+.footer
+{
+	background-color: transparent;
+}

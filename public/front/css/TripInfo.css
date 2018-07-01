@@ -1,0 +1,98 @@
+body
+{
+	background-image: none;
+}
+img
+{
+	margin-right: .5%;
+	margin-left: .5%;
+}
+.Info
+{
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+.Price
+{
+	margin-top: 2%;
+	width: 20%;
+	text-align: center;
+}
+.Tour
+{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: #151515;
+
+}
+.inclusionHead
+{
+	color:#FEC552;
+}
+.inclusionP
+{
+	color:white;
+}
+.exclusions
+{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.regular
+{
+	width: 70%;
+}
+
+.Form
+{
+	width: 65%;
+}
+.form-control
+{
+	border-radius: 0;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	background-color: transparent;
+	margin-bottom: 3%;	
+	color: white;
+}
+.form-control:hover,.form-control:active,.form-control:focus
+{
+	border-radius: 0;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: #feca57;
+}
+.btn 
+{
+	
+	
+	color: #feca57;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.btn:hover,.btn:focus,.btn:active
+{
+	background-color: #151515;
+	color: #feca57;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.ContactUs
+{
+	background-image: url(../img/map-bg3.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,446 @@
+body
+{
+	font-family: 'Quicksand', sans-serif;
+}
+hr
+{
+	width: 5%;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #feca57;
+}
+h1
+{
+	color: white;
+	
+}
+h3
+{
+
+	color: #feca57;
+}
+h4
+{
+	font-size: 20px;
+}
+p
+{
+	font-size: 17px;
+	color: white;
+}
+a
+{
+	color: white;
+	cursor: pointer;
+
+}
+
+/* ================
+animations
+===============*/
+
+@-webkit-keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+/*=================
+end of animation
+ ============*/
+/*=================
+nav
+================*/
+.navbar-brand
+{
+	color:white;
+}
+.navbar
+{
+	background-color: transparent;
+	border-color: transparent;
+	padding-top: 1%;
+}
+
+.NavLink
+{
+	color:white;
+	font-size: 15px;
+	opacity: .7;
+}
+.NavLink:hover,.NavLink:active,.NavLink:focus
+{
+	opacity: 1;
+}
+.Logo
+{
+	color: #feca57;
+	font-size: 20px;
+}
+.NavDesign
+{
+	color: #fbc531;
+	font-size: 15px;
+	opacity: .7;
+}
+.NavDesign:hover,.NavDesign:active,.NavDesign:focus
+{
+	opacity: 1;
+}
+.form-control
+{
+	padding: 25px;
+	border-bottom-left-radius: 25px;
+	box-shadow: none;
+}
+.form-control:hover,.form-control:focus
+{
+	box-shadow: none;
+	border-color:#efb534;
+
+
+}
+.form-control:active
+{
+	 border-color: none;
+	 box-shadow: none;
+
+}
+
+#inputSearch
+{
+	padding: 12px;
+	color:#F24E31;
+}
+.SearchBtn
+{
+	border-top-right-radius: 25px;
+}
+/*=================
+ End nav
+================*/
+/*=================
+Welcome Section
+================*/
+/*
+.WelcomeSection
+{
+	background-image: url(../img/bckgrnd.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-bottom: 14%;
+}*/
+.HeadDesign
+{
+	color:#feca57;
+
+}
+
+.Header
+{
+	margin-top: 5%;
+	padding-top: 7%;
+	padding-bottom: 6%;
+}
+.HeadBody
+{
+	font-size: 23px;
+	color:white;
+}
+.SearchInput
+{
+	width: 40%;
+	margin-top: 2%;
+}
+@media(max-width: 600px)
+{
+	.SearchInput
+{
+	width: 80%;
+}
+}
+
+
+
+/*=================
+End Welcome Section
+================*/
+
+
+
+/*=================
+Start Experince Section
+================*/
+.Experince
+{
+	margin-top: -7%;
+	padding-top: 13%;
+	background-image: url('../img/map-bg.png');
+	padding-bottom: 5%;
+	color:white;
+}
+@media(max-height: 767px)
+{
+	.Experince
+	{
+	    margin-top: -20%;
+	    padding-top: 15%;
+		background-image: url('../img/map-bg.png');
+		padding-bottom: 5%;
+		color:white;
+	}
+}
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none;
+    outline: none;
+    background-color: black; 
+    color: #feca57; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+#myBtn:hover {
+    background-color: #555; 
+}
+.Up
+{
+	color:#feca57;
+}
+/*=================
+Start Experince Section
+================*/
+.ExperinceHeader
+{
+	color:#feca57;
+}
+.ExperinceSecHeader
+{
+	color:white;
+}
+
+/*=================
+CUSTOMERS SECTION
+================*/
+.Customers
+{
+	padding-top: 4%;
+}
+.CustomerHeader
+{
+	color:#2f3542;
+	letter-spacing: 2px;
+}
+.MobNames
+{
+	color:black;
+}
+
+.imgMob
+{
+	-webkit-animation-name: zoomInDown;
+  	animation-name: zoomInDown;
+  	animation-duration: 1s;
+  	display: none;
+}
+#imgMob1
+{
+	-webkit-animation-name: zoomInDown;
+  	animation-name: zoomInDown;
+  	animation-duration: 1s;
+}
+.Mobile
+{
+	display: none;
+}
+@media(max-width: 763px)
+{
+	.Mobile
+	{
+		display: block;
+	}
+	.Large
+	{
+		display: none;
+	}
+}
+.image
+{
+	margin-top: 4%;
+	border-radius: 25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.image:hover
+{
+	width: 102%;
+}
+.Names
+{
+	color:black;
+}
+
+.Job
+{
+	color:#f24e31;
+}
+
+/*=================
+End CUSTOMERS SECTION
+================*/
+
+
+/*=================
+Cards
+================*/
+
+
+
+.Cards
+{
+	
+	margin-bottom:3%;
+}
+.Moving
+{
+	-webkit-animation-name: zoomInDown;
+  	animation-name: zoomInDown;
+  	animation-duration: 1s;
+  	display: none;
+}
+.active
+{
+	-webkit-animation-name: zoomInDown;
+  	animation-name: zoomInDown;
+  	animation-duration: 1s;
+}
+.ImageCard
+{
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.SecHr
+{
+	border-color: #151515;
+}
+@media (max-width: 991px)
+{
+	.paper
+	{
+	border-radius: 25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding-bottom: 30%;
+	}
+}
+/*=================
+END Cards
+================*/
+/*=================
+Start Explore
+================*/
+.Explore
+{
+	background-image: url(../img/bckgroundSection.jpg);
+	background-size: cover;
+	padding-top: 4%;
+	padding-bottom: 6%;
+}
+
+/*=================
+END Explore
+================*/
+.History
+{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.HistoryHeader
+{
+	color:#F24E31;
+}
+#P-unique
+{
+
+	color:black;
+}
+
+
+.Contact
+{
+	font-size: 15px;
+	opacity: .7
+}
+
+.Contact:hover
+{
+	opacity: 1;
+}
+#ContactData
+{
+	color:black;
+}
+.ContactTitles
+{
+	content: white;
+	font-size: 15px;
+	margin-right: 3%;
+	margin-left: 8%;
+}
+.ContactTitles:hover
+{
+	color:#efb534;
+}
+/*=================
+start FOOTER
+================*/
+
+.footer
+{
+	background-color: #151515;
+	color: white;
+	padding: 1%;
+}
+@media(max-width: 767px)
+{
+	.ContactTitles
+	{
+		margin-left: 0%;
+	}
+	
+}
