@@ -74,26 +74,31 @@
 
 
                     <div class="tab-unit">
-
-                       <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label for="no_of_visitors">number of visitors</label>
-                                <input type="text" name="no_of_visitors[]" class="form-control"
+                            <div class="removable" >
+                                <div class="col-lg-5 col-md-5 col-sm-5">
+                                     <div class="form-group">
+                                      <label for="no_of_visitors">number of visitors</label>
+                                        <input type="text" name="no_of_visitors[]" class="form-control"
                                        placeholder="number of visitors"
-                                       id="no_of_visitors">
-                            </div>
-                        </div>
+                                       id="no_of_visitors"  >
+                                      </div>
+                                </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="form-group">
-                                <label for="price_of_visitor">price of visitor</label>
-                                <input type="text" name="price_of_visitor[]" class="form-control"
+                                <div class="col-lg-5 col-md-5 col-sm-5">
+                                  <div class="form-group">
+                                      <label for="price_of_visitor">price of visitor</label>
+                                      <input type="text" name="price_of_visitor[]" class="form-control"
                                        placeholder="price of one visitor"
-                                       id="price_of_visitor">
+                                       id="price_of_visitor" >
+                                  </div>
+
+                                 </div>
+
+                                <div class="col-lg-2 col-md-2 col-sm-2">
+                                    <div  class=" btn btn-danger removeBt"  onclick="del(this)">&times;</div>
+                                </div>
+
                             </div>
-
-                        </div>
-
 
 
                     </div>
@@ -145,7 +150,7 @@
 
     <script>
 
-        var row = ' <div class="col-lg-6 col-md-6 col-sm-6">\n' +
+        var row = '  <div class="removable" ><div class="col-lg-5 col-md-5 col-sm-5">\n' +
             '                            <div class="form-group">\n' +
             '                                <label for="no_of_visitors">number of visitors</label>\n' +
             '                                <input type="text" name="no_of_visitors[]" class="form-control"\n' +
@@ -154,14 +159,14 @@
             '                            </div>\n' +
             '                        </div>\n' +
             '\n' +
-            '                        <div class="col-lg-6 col-md-6 col-sm-6">\n' +
+            '                        <div class="col-lg-5 col-md-5 col-sm-5">\n' +
             '                            <div class="form-group">\n' +
             '                                <label for="price_of_visitor">price of visitor</label>\n' +
             '                                <input type="text" name="price_of_visitor[]" class="form-control"\n' +
             '                                       placeholder="price of one visitor"\n' +
             '                                       id="price_of_visitor">\n' +
             '                            </div>\n' +
-            '                        </div> <hr>';
+            '                        </div><div class="col-lg-2 col-md-2 col-sm-2"><div  class=" btn btn-danger removeBt"  onclick="del(this)">&times;</div></div>  </div>';
 
         $('.appendText').on('click',function(){
 
@@ -169,6 +174,17 @@
 
 
         });
+
+
+    function del(e)
+    {
+        var x =$(e).parents('.removable');
+        x.remove();
+    }
+
+
+
+
 
 
 
