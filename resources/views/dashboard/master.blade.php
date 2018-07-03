@@ -34,48 +34,18 @@
             {
 
 
-                width: 100px;
-                height: 100px;
-                background-color: #333;
+                width: 60px;
+                height: 60px;
+                background-color: #2A3F54;
 
-                margin: 100px auto;
+                margin:  auto;
+                margin-top: 250px;
+                padding-bottom: 70px;
                 -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
                 animation: sk-rotateplane 1.2s infinite ease-in-out;
             }
 
 
-         /*   .social ul li{
-                list-style:none;
-                padding-left:12px;
-                color:white;
-            }
-            li a{
-                text-decoration:none;
-            }
-            .social ul{
-                display:inline-flex;
-                padding-left: 60px;
-            }
-
-            .box{
-                width:45%;
-                background: rgba(226,226,226,1);
-                background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 10%, rgba(209,209,209,1) 98%, rgba(254,254,254,1) 100%);
-                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226,226,226,1)), color-stop(10%, rgba(219,219,219,1)), color-stop(98%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
-                background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 10%, rgba(209,209,209,1) 98%, rgba(254,254,254,1) 100%);
-                background: -o-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 10%, rgba(209,209,209,1) 98%, rgba(254,254,254,1) 100%);
-                background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 10%, rgba(209,209,209,1) 98%, rgba(254,254,254,1) 100%);
-                background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 10%, rgba(209,209,209,1) 98%, rgba(254,254,254,1) 100%);
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
-
-            }
-            p{
-                padding:40px;
-            }
-            .outer-box{
-                margin-top:60px;
-                margin-left:450px;
-            }*/
 
 
             @-webkit-keyframes sk-rotateplane {
@@ -103,6 +73,7 @@
         <div class="loader">
 
             <div class="spinner"></div>
+            <p class="text-center">loading...</p>
         </div>
 
 

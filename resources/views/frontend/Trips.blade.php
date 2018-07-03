@@ -70,7 +70,8 @@
 
       $categories = \App\Category::all();
       ?>
-        <button type="button" class="list-group-item active ListBtn">All</button>
+
+        <a href="/tripsFront"><button type="button" class="list-group-item active ListBtn">All</button></a>
         @if($categories)
       @foreach($categories as $category)
           <a href="/category/showing/{{$category->id}}" class="list-group-item  ListBtn">{{$category->name}}</a>
@@ -102,7 +103,7 @@
               </div>
             </center>
           </div>
-          <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->image}}">
+          <img src="{{url('/')}}/img/alt_images/{{$d->image}}">
         </div>
         <div class="description">
           <center>
@@ -139,7 +140,7 @@
                       </div>
                     </center>
                   </div>
-                  <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->image}}">
+                  <img src="{{url('/')}}/img/alt_images/{{$d->image}}">
                 </div>
                 <div class="description">
                   <center>
@@ -168,7 +169,7 @@
                       </div>
                     </center>
                   </div>
-                  <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->image}}">
+                  <img src="{{url('/')}}/img/alt_images/{{$d->image}}">
                 </div>
                 <div class="description">
                   <center>

@@ -113,7 +113,9 @@
 
                                     </div>
                                     <div class="col-lg-2 col-md-2 col-sm-2">
-                                        <div class=" btn btn-danger removeBt" onclick="del(this)">&times;</div>
+                                        <label for="price_of_visitor" style="    visibility: hidden;"> .</label>
+                                        <div class=" btn btn-danger form-control removeBt"
+                                             onclick="del(this)">Delete</div>
                                     </div>
                                 </div>
                             @endforeach
@@ -191,7 +193,8 @@
             '                                       id="price_of_visitor">\n' +
 
             '                            </div>\n' +
-            '                        </div> <div class="col-lg-2 col-md-2 col-sm-2"><div  class=" btn btn-danger removeBt"  onclick="del(this)">&times;</div></div>  </div><hr>';
+            '                        </div> <div class="col-lg-2 col-md-2 col-sm-2"><label for="price_of_visitor" style="    visibility: hidden;"> .</label><div  class="btn btn-danger form-control removeBt"' +
+            '                            onclick="del(this)">Delete</div></div>  </div><hr>';
 
         $('.appendText').on('click', function () {
 

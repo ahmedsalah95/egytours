@@ -143,7 +143,7 @@
     @if($images)
     @foreach($images as $image)
     <div>
-      <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$image->image}}">
+      <img src="{{url('/')}}/img/alt_images/{{$image->image}}">
     </div>
     @endforeach
         @endif

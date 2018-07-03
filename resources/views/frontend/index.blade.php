@@ -169,14 +169,14 @@ $Testimonials = \App\Testimonial::all();
                         @if($key==0)
                 <center>
                     <div class="MobActive" id="imgMob{{$co++}}">
-                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%">
+                        <img src="{{url('/')}}/img/alt_images/{{$testimonial->image}}" class="image" width="100%">
                         <h4>{{$testimonial->title}}</h4>
                         <hr>
                         <h4>{!!$testimonial->description!!}</h4>
                     </div>
                     @else
                     <div id="imgMob{{$co++}}" class="imgMob">
-                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%">
+                        <img src="{{url('/')}}/img/alt_images/{{$testimonial->image}}" class="image" width="100%">
                         <h4>{{$testimonial->title}}</h4>
                         <hr>
                         <h4>{!!$testimonial->description!!}</h4>
@@ -202,7 +202,7 @@ $Testimonials = \App\Testimonial::all();
             @foreach($Testimonials as $testimonial)
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%" id="num{{$counter}}" onclick="ShowCard(this.id)">
+                <img src="{{url('/')}}/img/alt_images/{{$testimonial->image}}" class="image" width="100%" id="num{{$counter}}" onclick="ShowCard(this.id)">
                 <br>
                 <center>
                     <h3><span class="Names"> {{$testimonial->title}}</span></h3>
@@ -231,7 +231,7 @@ $Testimonials = \App\Testimonial::all();
 
                 <div class="row active" id="card{{$counter}}">
                     <div class="col-lg-4 ">
-                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$value->image}}" width="100%;" class="ImageCard">
+                        <img src="{{url('/')}}/img/alt_images/{{$value->image}}" width="100%;" class="ImageCard">
                     </div>
                     <div class="col-lg-7">
                         <center>
@@ -249,7 +249,7 @@ $Testimonials = \App\Testimonial::all();
 
                 <div class="row Moving" id="card<?php echo ++$counter ?>">
                     <div class="col-lg-4">
-                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$value->image}}"  width="100%;" class="ImageCard">
+                        <img src="{{url('/')}}/img/alt_images/{{$value->image}}"  width="100%;" class="ImageCard">
                     </div>
                     <div class="col-lg-7">
                         <center>

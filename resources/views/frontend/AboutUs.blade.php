@@ -72,7 +72,7 @@
 			 @if($key%2==0)
 						<div class="col-lg-12 Contain">
 							<div  class="col-lg-6">
-								<img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$ab->image}}" alt="ME" width="100%;">
+								<img src="{{url('/')}}/img/alt_images/{{$ab->image}}" alt="ME" width="100%;">
 							</div>
 							<div class="col-lg-6">
 								<br>
@@ -100,7 +100,7 @@
 		  		</center>
 		  	</div>
 			<div  class="col-lg-6">
-		      <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$ab->image}}" alt="ME" width="100%;">
+		      <img src="{{url('/')}}/img/alt_images/{{$ab->image}}" alt="ME" width="100%;">
 		  	</div>
 		  	</div>
 				 @endif
