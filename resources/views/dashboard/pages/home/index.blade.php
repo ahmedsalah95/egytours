@@ -34,8 +34,8 @@
                             </div>
                             <div class="form-group">
                                 <h3 class="current header image"></h3>
-                                    <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->image}}"
-                                         alt="logo" class="img-responsive img-thumbnail" >
+                                <img src="{{url('/')}}/img/alt_images/{{$d->image}}
+                                        "  alt="logo" class="img-responsive img-thumbnail" width="250" height="250">
 
                             </div>
 
@@ -84,8 +84,8 @@
 
                             <div class="form-group">
                                 <h3 class="current header image"></h3>
-                                <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->section_5_image}}"
-                                     alt="logo" class="img-responsive img-thumbnail" >
+                                <img src="{{url('/')}}/img/alt_images/{{$d->section_5_image}}"
+                                     alt="logo" class="img-responsive img-thumbnail" width="250" height="250">
 
                             </div>
 

@@ -19,7 +19,7 @@
 
         </div>
 
-        @foreach($data as $d)
+
         <div class="row">
 
             <div class="col-lg-12">
@@ -45,8 +45,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
 
                         <div class="form-group">
-                            <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->image}}"
-                                 alt="logo" class="img-responsive img-thumbnail" >
+                            <img src="{{url('/')}}/img/alt_images/{{$d->image}}"  alt="logo" class="img-responsive img-thumbnail">
 
                         </div>
                     </div>
@@ -69,7 +68,6 @@
 
         </div>
 
-        @endforeach
     </div>
 
 

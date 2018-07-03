@@ -29,8 +29,7 @@
                     @csrf
 
                     <div class="col-lg-4 col-md-4 col-sm-4 pull right">
-                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$data->image}}"
-                             alt="logo" class="img-responsive img-thumbnail" >
+                        <img src="{{url('/')}}/img/alt_images/{{$data->image}}"  alt="logo" class="img-responsive img-thumbnail" width="250" height="250">
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12">

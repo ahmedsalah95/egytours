@@ -27,8 +27,8 @@
                     <input type="hidden" name="_method" value="PUT">
                     @csrf
                     <div class="col-lg-12 col-md-12 col-sm-12">
-                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$dataOfTrips->image}}"
-                             alt="logo" class="img-responsive img-thumbnail" >
+                        <img src="{{url('/')}}/img/alt_images/{{$dataOfTrips->image}}" alt="logo"
+                             class="img-responsive img-thumbnail">
                     </div>
 
                     <div class="col-lg-6 col-md-6 col-sm-12">
@@ -51,9 +51,9 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="form-group">
                             <label for="title">title</label>
-                            <input  id="title"  name="title"
-                                    class="form-control"
-                                    value="{{$dataOfTrips->title}}"
+                            <input id="title" name="title"
+                                   class="form-control"
+                                   value="{{$dataOfTrips->title}}"
                             >
                         </div>
                     </div>
@@ -61,12 +61,12 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="form-group">
                             <label for="category">category</label>
-                            <select class="form-control" name="category_id" id="category" >
+                            <select class="form-control" name="category_id" id="category">
 
                                 @if ($categories->count())
 
                                     @foreach($categories as $category)
-                                        <option value="{{ $category->id }}" >{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
 
 
                                     @endforeach
@@ -77,46 +77,47 @@
                     </div>
 
 
-
                     <div class="tab-unit">
 
 
-                    @if($visitors)
+                        @if($visitors)
 
                             @foreach($visitors as $visitor)
 
                                 <div class="removable">
 
 
-                                <div class="col-lg-5 col-md-5 col-sm-5">
-                                    <div class="form-group">
-                                        <label for="no_of_visitors">number of visitors</label>
-                                        <input type="text" name="no_of_visitors[]" class="form-control"
-                                               placeholder="number of visitors"
-                                               id="no_of_visitors"
-                                        value="{{$visitor->no_of_visitors}}"
+                                    <div class="col-lg-5 col-md-5 col-sm-5">
+                                        <div class="form-group">
+                                            <label for="no_of_visitors">number of visitors</label>
+                                            <input type="text" name="no_of_visitors[]" class="form-control"
+                                                   placeholder="number of visitors"
+                                                   id="no_of_visitors"
+                                                   value="{{$visitor->no_of_visitors}}"
 
-                                        >
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-5 col-md-5 col-sm-5">
-                                    <div class="form-group">
-                                        <label for="price_of_visitor">price of visitor</label>
-                                        <input type="text" name="price_of_visitor[]" class="form-control"
-                                               placeholder="price of one visitor"
-                                               id="price_of_visitor"
-                                               value="{{$visitor->price_of_visitor}}"
-
-                                        >
-
+                                            >
+                                        </div>
                                     </div>
 
-                                </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2"><div  class=" btn btn-danger removeBt"  onclick="del(this)">&times;</div></div>
+                                    <div class="col-lg-5 col-md-5 col-sm-5">
+                                        <div class="form-group">
+                                            <label for="price_of_visitor">price of visitor</label>
+                                            <input type="text" name="price_of_visitor[]" class="form-control"
+                                                   placeholder="price of one visitor"
+                                                   id="price_of_visitor"
+                                                   value="{{$visitor->price_of_visitor}}"
+
+                                            >
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2">
+                                        <div class=" btn btn-danger removeBt" onclick="del(this)">&times;</div>
+                                    </div>
                                 </div>
                             @endforeach
-                     @endif
+                        @endif
 
 
                     </div>
@@ -126,8 +127,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea  id="description" cols="10" rows="3" name="description"
-                                       class="form-control"
+                            <textarea id="description" cols="10" rows="3" name="description"
+                                      class="form-control"
 
                             >
                                 {{$dataOfTrips->description}}
@@ -140,8 +141,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="form-group">
                             <label for="inclusion">inclusion</label>
-                            <textarea  id="inclusion" cols="10" rows="3" name="inclusion"
-                                       class="form-control"
+                            <textarea id="inclusion" cols="10" rows="3" name="inclusion"
+                                      class="form-control"
                             > {{$dataOfTrips->inclusion}}</textarea>
                         </div>
                     </div>
@@ -149,13 +150,11 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="form-group">
                             <label for="exclusion">exclusion</label>
-                            <textarea  id="exclusion" cols="10" rows="3" name="exclusion"
-                                       class="form-control"
+                            <textarea id="exclusion" cols="10" rows="3" name="exclusion"
+                                      class="form-control"
                             >{{$dataOfTrips->exclusion}}</textarea>
                         </div>
                     </div>
-
-
 
 
                     <input type="submit" name="submit" class="btn btn-success btn-block">
@@ -194,7 +193,7 @@
             '                            </div>\n' +
             '                        </div> <div class="col-lg-2 col-md-2 col-sm-2"><div  class=" btn btn-danger removeBt"  onclick="del(this)">&times;</div></div>  </div><hr>';
 
-        $('.appendText').on('click',function(){
+        $('.appendText').on('click', function () {
 
             $('.tab-unit').append(row);
 
@@ -202,18 +201,16 @@
         });
 
 
-
-        function del(e)
-        {
-            var x =$(e).parents('.removable');
+        function del(e) {
+            var x = $(e).parents('.removable');
             x.remove();
         }
     </script>
 
     <script>
-        CKEDITOR.replace( 'description' );
-        CKEDITOR.replace( 'inclusion' );
-        CKEDITOR.replace( 'exclusion' );
+        CKEDITOR.replace('description');
+        CKEDITOR.replace('inclusion');
+        CKEDITOR.replace('exclusion');
     </script>
 
 @stop

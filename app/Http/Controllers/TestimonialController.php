@@ -54,8 +54,8 @@ class TestimonialController extends Controller
 
     public function edit($id)
     {
-        $data = Testimonial::all();
-        return view('dashboard.pages.testimonial.updateTestimonial',['id'=>$id,'data'=>$data]);
+        $d = Testimonial::where('id',$id)->first();
+        return view('dashboard.pages.testimonial.updateTestimonial',['id'=>$id,'d'=>$d]);
     }
 
 

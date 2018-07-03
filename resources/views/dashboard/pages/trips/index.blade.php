@@ -58,8 +58,7 @@
 
                             <tr>
                                 <td>{{$d->id}}</td>
-                                <td><img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$d->image}}"
-                                         alt="logo" class="img-responsive img-thumbnail" width="150" height="150"></td>
+                                <td><img src="<?php echo asset("img/alt_images/$d->image") ?>"  alt="logo" class="img-responsive img-thumbnail" width="150" height="150"></td>
                                 <td>{{$d->title}}</td>
                                 <td>{!! str_limit($d->description,50)    !!}</td>
                                 <td>
