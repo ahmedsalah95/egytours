@@ -146,18 +146,14 @@ $Testimonials = \App\Testimonial::all();
 <section class="Customers">
     <div class="container Mobile" style="text-align: center;">
         <div class="row">
+            @if($Testimonials)
+                <?php $c=1;?>
+                @foreach($Testimonials as $testimonial)
             <div class="col-xs-3">
-                <a class="MobNames" id="MobName1" onclick="MobShowFeedBack(id)">Name1</a>
+                <a class="MobNames" id="MobName{{$c++}}" onclick="MobShowFeedBack(this.id)">{{$testimonial->title}}</a>
             </div>
-            <div class="col-xs-3">
-                <a class="MobNames" id="MobName2" onclick="MobShowFeedBack(id)">Name1</a>
-            </div>
-            <div class="col-xs-3">
-                <a class="MobNames" id="MobName3" onclick="MobShowFeedBack(id)">Name1</a>
-            </div>
-            <div class="col-xs-3">
-                <a class="MobNames" id="MobName4" onclick="MobShowFeedBack(id)">Name1</a>
-            </div>
+                @endforeach
+            @endif
             <br>
             <hr>
             <br>
@@ -165,32 +161,32 @@ $Testimonials = \App\Testimonial::all();
 
             </div>
             <div class="col-xs-6">
+
+                @if($Testimonials)
+                    <?php $co=1;?>
+                    @foreach($Testimonials as  $key=>$testimonial)
+
+                        @if($key==0)
                 <center>
-                    <div class="MobActive" id="imgMob1">
-                        <img src="img/1.jpg" class="image" width="100%">
-                        <h4>feed back</h4>
+                    <div class="MobActive" id="imgMob{{$co++}}">
+                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%">
+                        <h4>{{$testimonial->title}}</h4>
                         <hr>
-                        <h4>TEXT TEXT TEXT TEXT TEXT</h4>
+                        <h4>{!!$testimonial->description!!}</h4>
                     </div>
-                    <div id="imgMob2" class="imgMob">
-                        <img src="img/2.jpg" class="image" width="100%">
-                        <h4>feed back</h4>
+                    @else
+                    <div id="imgMob{{$co++}}" class="imgMob">
+                        <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%">
+                        <h4>{{$testimonial->title}}</h4>
                         <hr>
-                        <h4>TEXT TEXT TEXT TEXT TEXT</h4>
+                        <h4>{!!$testimonial->description!!}</h4>
                     </div>
-                    <div id="imgMob3" class="imgMob">
-                        <img src="img/3.jpg" class="image" width="100%">
-                        <h4>feed back</h4>
-                        <hr>
-                        <h4>TEXT TEXT TEXT TEXT TEXT</h4>
-                    </div>
-                    <div id="imgMob4" class="imgMob">
-                        <img src="img/4.jpg" class="image" width="100%">
-                        <h4>feed back</h4>
-                        <hr>
-                        <h4>TEXT TEXT TEXT TEXT TEXT</h4>
-                    </div>
+                    @endif
                 </center>
+                            
+
+                  @endforeach
+                @endif
             </div>
         </div>
     </div>
@@ -206,7 +202,7 @@ $Testimonials = \App\Testimonial::all();
             @foreach($Testimonials as $testimonial)
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%" id="num{{$counter}}" onclick="ShowCard(id)">
+                <img src="{{\Illuminate\Support\Facades\Config::get('app.url')}}/egy-tour/public/img/alt_images/{{$testimonial->image}}" class="image" width="100%" id="num{{$counter}}" onclick="ShowCard(this.id)">
                 <br>
                 <center>
                     <h3><span class="Names"> {{$testimonial->title}}</span></h3>
@@ -387,7 +383,7 @@ $Testimonials = \App\Testimonial::all();
        }
 
 
-        for(var i = 1 ; i < ids.length ; i++)
+        for(var i = 0 ; i < ids.length ; i++)
         {
             if(ids[i]==id)
             {
@@ -397,7 +393,7 @@ $Testimonials = \App\Testimonial::all();
             else
             {
 
-                document.getElementById(cards[i]).style.display='none';
+                document.getElementById(""+cards[i]+"").style.display='none';
             }
         }
     }

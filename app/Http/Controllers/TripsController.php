@@ -55,10 +55,11 @@ class TripsController extends Controller
             'image' => 'required|image',
             'description' => 'required|nullable',
             'title' => 'required',
-            'no_of_visitors' => 'required',
-            'price_of_visitor' => 'required',
+
             'inclusion'=>'required',
             'exclusion'=>'required',
+            'no_of_visitors.*' => 'required|min:1',
+            'price_of_visitor.*' => 'required|min:1',
 
 
         ]);
@@ -154,8 +155,8 @@ class TripsController extends Controller
             'inclusion'=>'required',
             'exclusion'=>'required',
             'title' => 'required',
-            'no_of_visitors' => 'required',
-            'price_of_visitor' => 'required',
+            'no_of_visitors.*' => 'required|min:1',
+            'price_of_visitor.*' => 'required|min:1',
 
 
         ]);
