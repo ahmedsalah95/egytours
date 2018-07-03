@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2018 at 08:56 PM
+-- Generation Time: Jul 03, 2018 at 12:36 PM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -32,7 +32,7 @@ CREATE TABLE `abouts` (
   `id` int(10) UNSIGNED NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -42,9 +42,8 @@ CREATE TABLE `abouts` (
 --
 
 INSERT INTO `abouts` (`id`, `image`, `title`, `description`, `created_at`, `updated_at`) VALUES
-(3, 'egy.jpg', 'egypt 3', '<p><span style=\"font-size:11px\">testing my desc</span></p>', '2018-06-23 16:48:52', '2018-06-23 16:48:52'),
-(4, 'egy.jpg', 'egy 4', '<p>test</p>', '2018-06-23 16:56:47', '2018-06-23 16:56:47'),
-(6, 'egy2.jpg', 'egypt 3', 'testing', '2018-06-26 10:46:28', '2018-06-26 10:46:28');
+(7, 'egy.jpg', 'about us section 1', '<p>&nbsp;testing about us section 1&nbsp;&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;testing about us section 1&nbsp;</p>', '2018-07-01 17:43:10', '2018-07-01 17:43:10'),
+(8, 'egy4.jpg', 'about us test 2', '<p>about us test 2 desc&nbsp;</p>', '2018-07-03 06:19:54', '2018-07-03 06:23:31');
 
 -- --------------------------------------------------------
 
@@ -65,9 +64,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at`) VALUES
-(3, 'test', '<p><span style=\"font-size:11px\">testtesting my desc</span></p>', '2018-06-26 06:32:43', '2018-06-27 07:30:55'),
-(4, 'ahmed', '<p>test</p>', '2018-06-26 11:00:46', '2018-06-27 12:10:45'),
-(5, 'cat3', '<p>testingcat&nbsp;</p>', '2018-06-28 07:14:55', '2018-06-28 07:14:55');
+(6, 'cat 1', '<p>test category 1</p>', '2018-07-01 17:52:35', '2018-07-01 17:52:35');
 
 -- --------------------------------------------------------
 
@@ -78,7 +75,7 @@ INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at
 CREATE TABLE `contacts` (
   `id` int(10) UNSIGNED NOT NULL,
   `page_title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
   `map` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -89,7 +86,7 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `page_title`, `description`, `map`, `created_at`, `updated_at`) VALUES
-(1, 'test title 2', '<p>hhhhhhhhhhhhhhhhhhhhhhhhhhhhklllll</p>', 'test address', '2018-06-23 22:00:00', '2018-06-27 12:05:28');
+(2, 'test contact us', '<p>&nbsp;testing contact ustesting contact ustesting contact ustesting contact us</p>', 'test test test', '2018-06-30 22:00:00', '2018-07-01 17:47:50');
 
 -- --------------------------------------------------------
 
@@ -111,13 +108,7 @@ CREATE TABLE `contactuses` (
 --
 
 INSERT INTO `contactuses` (`id`, `email`, `subject`, `message`, `created_at`, `updated_at`) VALUES
-(1, 'ahmedsalah9570@gmail.com', 'aasdasd', 'asdasdasda', '2018-06-29 19:45:02', '2018-06-29 19:45:02'),
-(2, 'admin@admin.com', 'testing', 'test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test', '2018-06-29 20:31:56', '2018-06-29 20:31:56'),
-(3, 'ahmedsalah9570@gmail.com', 'ewqe', 'sdasdasd', '2018-06-30 13:16:55', '2018-06-30 13:16:55'),
-(4, 'sherif@gmail.com', 'test test test', 'resrsf sdf sdf', '2018-06-30 16:14:31', '2018-06-30 16:14:31'),
-(5, 'sherifsherif@gmail.com', 'sherifsherif', 'sherifsherif', '2018-06-30 16:15:42', '2018-06-30 16:15:42'),
-(6, 'admin@admi.com', 'asd', 'sad', '2018-07-01 14:19:47', '2018-07-01 14:19:47'),
-(7, 'admin@admin.com', 'qa', 'sa', '2018-07-01 14:33:12', '2018-07-01 14:33:12');
+(8, 'ahmedsalah9570@gmail.com', 'test contact', 'test contact', '2018-07-01 17:00:17', '2018-07-01 17:00:17');
 
 -- --------------------------------------------------------
 
@@ -138,15 +129,8 @@ CREATE TABLE `galleries` (
 --
 
 INSERT INTO `galleries` (`id`, `trip_id`, `image`, `created_at`, `updated_at`) VALUES
-(37, 32, 'egy.jpg', '2018-06-27 09:03:48', '2018-06-27 09:03:48'),
-(38, 32, 'egy2.jpg', '2018-06-27 09:03:48', '2018-06-27 09:03:48'),
-(55, 34, 'egy.jpg', '2018-06-27 09:33:54', '2018-06-27 09:33:54'),
-(56, 34, 'egy2.jpg', '2018-06-27 09:33:54', '2018-06-27 09:33:54'),
-(63, 39, '1.PNG', '2018-06-28 11:35:26', '2018-06-28 11:35:26'),
-(64, 39, 'Capture.PNG', '2018-06-28 11:35:26', '2018-06-28 11:35:26'),
-(65, 39, 'egy.jpg', '2018-06-28 11:35:26', '2018-06-28 11:35:26'),
-(66, 39, 'egy2.jpg', '2018-06-28 11:35:26', '2018-06-28 11:35:26'),
-(67, 39, 'stay-positive-1366x768-quotes-hd-3707.jpg', '2018-06-28 11:35:26', '2018-06-28 11:35:26');
+(1, 42, 'egy.jpg', '2018-07-03 06:28:05', '2018-07-03 06:28:05'),
+(2, 42, 'egy3.jpg', '2018-07-03 06:28:05', '2018-07-03 06:28:05');
 
 -- --------------------------------------------------------
 
@@ -172,7 +156,7 @@ CREATE TABLE `homes` (
 --
 
 INSERT INTO `homes` (`id`, `title`, `image`, `section_3_title`, `section_3_desc`, `section_5_title`, `section_5_desc`, `section_5_image`, `created_at`, `updated_at`) VALUES
-(1, 'test header1', 'stay-positive-1366x768-quotes-hd-3707.jpg', 'test teader2', '<p>teeeestuuuuuuuuuuuuuuuuuoooooooooooookkk</p>', 'test3', '<p>teesrser</p>', 'Capture.PNG', '2018-06-23 22:00:00', '2018-06-27 12:02:09');
+(2, 'test home settings', 'egy.jpg', 'test title 3', '<p>test desc 3</p>', 'test title 5', '<p>test desc 5</p>', 'egy3.jpg', '2018-06-30 22:00:00', '2018-07-03 07:19:30');
 
 -- --------------------------------------------------------
 
@@ -241,14 +225,8 @@ CREATE TABLE `plans` (
 --
 
 INSERT INTO `plans` (`id`, `name`, `email`, `nationality`, `whatsapp`, `coin`, `plan`, `created_at`, `updated_at`) VALUES
-(2, 'ahmed', 'ahmedsalah9570@gmail.com', 'Egyptian', '01116988471', 'Euro', 'test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test', '2018-06-29 18:28:21', '2018-06-29 18:28:21'),
-(3, 'sdf', 'sherif@gmail.com', 'Egyptian', '01014022800', 'Euro', 'asdadasdasdasdasd', '2018-06-30 14:14:02', '2018-06-30 14:14:02'),
-(4, 'ahmed', 'asda@asdd.vom', 'Egyptian', '21212', 'USD', 'fsdfsd', '2018-06-30 16:10:14', '2018-06-30 16:10:14'),
-(5, 'ahmed', 'sherif@gmail.com', 'England', '121212121', 'Euro', '2132131231', '2018-06-30 16:10:43', '2018-06-30 16:10:43'),
-(6, 'ziad', 'ziad@gmail.com', 'Egyptian', '011111', 'USD', 'dasdasdasdads', '2018-06-30 16:12:08', '2018-06-30 16:12:08'),
-(7, 'khaled', 'khaled@gmail.com', 'fdsfsd', '1212', 'USD', 'dadasdasdadsa', '2018-06-30 16:12:56', '2018-06-30 16:12:56'),
-(8, 'test', 'test@test.com', 'test', '1212', 'USD', 'test test', '2018-07-01 14:24:01', '2018-07-01 14:24:01'),
-(9, 'test', 'rtetst@test.com', 'eee', '0101021', 'USD', 'saedsdasd', '2018-07-01 14:29:59', '2018-07-01 14:29:59');
+(10, 'ahmed', 'ahmedsalah9570@gmail.com', 'Egyptian', '01116988471', 'Euro', 'weawea aewae  ewae', '2018-07-01 17:58:30', '2018-07-01 17:58:30'),
+(11, 'ahmed ssss', 'ahmedsalah9570@gmail.com', 'Egyptian', '1212', 'USD', 'ewwqdasdasd', '2018-07-01 18:06:37', '2018-07-01 18:06:37');
 
 -- --------------------------------------------------------
 
@@ -292,7 +270,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `image`, `phone`, `email`, `address`, `description`, `facebook`, `twitter`, `instagram`, `youtube`, `link1`, `link2`, `link3`, `link4`, `created_at`, `updated_at`) VALUES
-(1, 'Capture.PNG', '011169884711111', 'admin@admin.com', '1 dokki street , Giza, Cairo university , Giza', '<p>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkooooooooooo</p>', 'face', 'twitt', 'insta', 'yout', 'link11', 'link22', 'link33', 'link44', '2018-06-23 13:36:01', '2018-06-27 11:55:00');
+(3, '1.PNG', '01116988471', 'ahmedsalah9570@gmail.com', '1 street', '<p>test</p>', 'facebook', 't', 'instagram', 'youtube', '1', '2', '3', '4', '2018-06-30 22:00:00', '2018-07-01 17:40:38');
 
 -- --------------------------------------------------------
 
@@ -303,7 +281,7 @@ INSERT INTO `settings` (`id`, `image`, `phone`, `email`, `address`, `description
 CREATE TABLE `testimonials` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -314,9 +292,9 @@ CREATE TABLE `testimonials` (
 --
 
 INSERT INTO `testimonials` (`id`, `title`, `description`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'test test', '<p>ttttttttttttttttttttt</p>', 'Capture.PNG', '2018-06-24 09:35:14', '2018-06-26 06:11:31'),
-(2, 'test 2', '<p>test 2 test 2 test 2 test 2</p>', 'egy.jpg', '2018-06-28 09:19:26', '2018-06-28 09:19:26'),
-(3, 'test 3', '<p>test 3 test 3 test 3</p>', 'egy2.jpg', '2018-06-28 09:28:44', '2018-06-28 09:28:44');
+(4, 'test 3', '<p>test 3 test 3</p>', 'egy4.jpg', '2018-07-01 17:48:39', '2018-07-03 06:51:44'),
+(5, 'test 2.2', '<p>testimonial 2.2</p>', 'egy3.jpg', '2018-07-01 17:49:25', '2018-07-03 06:56:12'),
+(7, 'test 5', '<p>test test test</p>', 'egy5.jpg', '2018-07-03 06:58:18', '2018-07-03 06:58:18');
 
 -- --------------------------------------------------------
 
@@ -341,13 +319,8 @@ CREATE TABLE `trips` (
 --
 
 INSERT INTO `trips` (`id`, `category_id`, `image`, `title`, `description`, `inclusion`, `exclusion`, `created_at`, `updated_at`) VALUES
-(31, 3, 'egy2.jpg', 'q', '<p>testig testig</p>', '', '', '2018-06-26 07:43:39', '2018-06-27 09:52:06'),
-(34, 3, 'egy2.jpg', 'validation3', '<p>aaaab</p>', '', '', '2018-06-27 09:33:10', '2018-06-27 09:33:33'),
-(35, 3, 'egy.jpg', 'hhhh', '<p>kk</p>', '', '', '2018-06-27 12:14:02', '2018-06-28 06:22:11'),
-(37, 4, 'stay-positive-1366x768-quotes-hd-3707.jpg', 'hh', '<p>jjjjjjjjjjjjjjjjjj</p>', '', '', '2018-06-27 12:24:46', '2018-06-27 12:24:46'),
-(38, 3, 'egy2.jpg', 'resrsersr', '<p>trertert</p>', '', '', '2018-06-27 13:05:19', '2018-06-27 13:05:19'),
-(39, 3, 'egy.jpg', 'testing title', '<p>testing</p>', '<p>tttestsetsetset inclusion</p>', '<p>tttestsetsetset exclusion</p>', '2018-06-28 06:15:48', '2018-06-28 11:35:25'),
-(40, 3, 'egy2.jpg', 'testing inclusion an exclusion', '<p>bla bla bla</p>', '<p>inclusion testing 1.1</p>', '<p>exclusion testing 1.1</p>', '2018-06-28 06:47:50', '2018-06-28 06:52:22');
+(41, 6, 'egy.jpg', 'test 1', '<p>testing trip 1</p>', '<p>inclusion</p>', '<p>exclusion</p>', '2018-07-01 17:53:42', '2018-07-01 17:53:42'),
+(42, 6, 'egy3.jpg', 'trip 2', '<p>test trip 2</p>', '<p>test inclusion</p>', '<p>test exclusion</p>', '2018-07-03 06:28:05', '2018-07-03 06:28:05');
 
 -- --------------------------------------------------------
 
@@ -370,7 +343,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Ahmed Salah Aldeen Mohamed Tawfeek', 'ahmedsalah9570@gmail.com', '$2y$10$oBFXnvjlyAKapfvfSCSllO5DtCKEovIZfokXOBm/DlblkVdD6Osm2', '7BLWsJc9lYihobwoydABBMGo71hBRxM8CFhzy1z9kkwztvTMCrryF4FkHVwO', '2018-06-23 13:21:42', '2018-06-27 12:18:24');
+(1, 'Ahmed Salah Aldeen Mohamed Tawfeek', 'ahmedsalah9570@gmail.com', '$2y$10$oBFXnvjlyAKapfvfSCSllO5DtCKEovIZfokXOBm/DlblkVdD6Osm2', 'IMDw80CclwydbRyFYNE7E9fLMAN6zaEwe7FFQw3we41RIJouLGlgL3Hpjzzx', '2018-06-23 13:21:42', '2018-06-27 12:18:24');
 
 -- --------------------------------------------------------
 
@@ -392,16 +365,9 @@ CREATE TABLE `visitors` (
 --
 
 INSERT INTO `visitors` (`id`, `trip_id`, `price_of_visitor`, `no_of_visitors`, `created_at`, `updated_at`) VALUES
-(80, 34, 2, 1, '2018-06-27 09:33:54', '2018-06-27 09:33:54'),
-(81, 34, 4, 2, '2018-06-27 09:33:54', '2018-06-27 09:33:54'),
-(82, 34, 6, 3, '2018-06-27 09:33:54', '2018-06-27 09:33:54'),
-(87, 31, 500, 1, '2018-06-27 09:52:06', '2018-06-27 09:52:06'),
-(92, 37, 200, 22, '2018-06-27 12:24:46', '2018-06-27 12:24:46'),
-(98, 35, 2000, 1, '2018-06-28 06:22:11', '2018-06-28 06:22:11'),
-(102, 40, 2200, 1, '2018-06-28 06:52:23', '2018-06-28 06:52:23'),
-(103, 40, 4400, 2, '2018-06-28 06:52:23', '2018-06-28 06:52:23'),
-(104, 40, 5500, 3, '2018-06-28 06:52:23', '2018-06-28 06:52:23'),
-(105, 39, 20, 1, '2018-06-28 11:35:26', '2018-06-28 11:35:26');
+(116, 41, 10, 1, '2018-07-02 11:15:53', '2018-07-02 11:15:53'),
+(117, 41, 20, 2, '2018-07-02 11:15:53', '2018-07-02 11:15:53'),
+(118, 42, 10, 1, '2018-07-03 06:28:05', '2018-07-03 06:28:05');
 
 --
 -- Indexes for dumped tables
@@ -506,37 +472,37 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `abouts`
 --
 ALTER TABLE `abouts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `contactuses`
 --
 ALTER TABLE `contactuses`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `homes`
 --
 ALTER TABLE `homes`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -548,7 +514,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `plans`
 --
 ALTER TABLE `plans`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `profiles`
@@ -560,19 +526,19 @@ ALTER TABLE `profiles`
 -- AUTO_INCREMENT for table `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `trips`
 --
 ALTER TABLE `trips`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -584,7 +550,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `visitors`
 --
 ALTER TABLE `visitors`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
